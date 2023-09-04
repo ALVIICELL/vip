@@ -9,12 +9,12 @@ NC='\e[0m'
 apt update && apt upgrade
 apt install python3 python3-pip git
 cd /usr/bin
-wget https://raw.githubusercontent.com/ALVIICELL/vip/main/bot/bot.zip
+wget https://abc.xcodehoster.com/bot/bot.zip
 unzip bot.zip
 mv bot/* /usr/bin
 chmod +x /usr/bin/*
 clear
-wget https://raw.githubusercontent.com/ALVIICELL/vip/main/bot/kyt.zip
+wget https://abc.xcodehoster.com/bot/kyt.zip
 unzip kyt.zip
 pip3 install -r kyt/requirements.txt
 
