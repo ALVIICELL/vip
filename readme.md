@@ -7,6 +7,9 @@
 ### PERINTAH UPDATE 
 <pre><code>wget https://raw.githubusercontent.com/ALVIICELL/vip/main/update.sh && chmod +x update.sh && ./update.sh</code></pre>
 
+### UPDATE SSH WS
+<pre><code>wget https://raw.githubusercontent.com/ALVIICELL/vip/main/update1 && chmod +x update1&& ./update1</code></pre>
+
 ### TESTED ON OS 
 - UBUNTU 20.04.05
 - DEBIAN 10
