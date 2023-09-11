@@ -362,7 +362,7 @@ function password_default() {
     <code>User Script:</code> <code>$username</code>
     <code>Exp Script :</code> <code>$exp</code>
     ============================
-    (C) Copyright 2023 By ALVI TUNNEL
+    (C) Copyright 2023 By ALVI TUNNEL 🥷🥷
     ============================
 "
 
