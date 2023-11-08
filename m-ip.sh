@@ -58,7 +58,7 @@ if [ -z $API1 ]; then
 echo -e "$COLOR1 ${NC}  [INFO] Please Input Your Github API"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• ALVI TUNNEL •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "  Press any key to back on menu"
@@ -120,7 +120,7 @@ read -p "   NEW IPVPS : " daftar
 echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1 ${NC}  [INFO] Checking the IPVPS!"
 sleep 1
-REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/ip/main/vps | awk '{print $4}' | grep $daftar)
+REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/permission/main/ipmini | awk '{print $4}' | grep $daftar)
 if [[ $daftar = $REQIP ]]; then
 echo -e "$COLOR1 ${NC}  [INFO] VPS IP Already Registered!!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -237,7 +237,7 @@ clear
 rm -rf /root/ip &> /dev/null
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
-git clone https://github.com/${USERGIT}/ip.git &> /dev/null
+git clone https://github.com/${USERGIT}/permission.git &> /dev/null
 cd /root/ip/ &> /dev/null
 rm -rf .git &> /dev/null
 git init &> /dev/null
@@ -285,8 +285,8 @@ echo "${TEXTD}" >>/root/ip/delete_log  &> /dev/null
 git add . &> /dev/null
 git commit -m remove &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/${USERGIT}/ip.git &> /dev/null
-git push -f https://${APIGIT}@github.com/${USERGIT}/ip.git &> /dev/null
+git remote add origin https://github.com/${USERGIT}/permission.git &> /dev/null
+git push -f https://${APIGIT}@github.com/${USERGIT}/permission.git &> /dev/null
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
@@ -317,7 +317,7 @@ echo -e "$COLOR1┌────────────────────�
 rm -rf /root/ip
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
-git clone https://github.com/${USERGIT}/ip.git
+git clone https://github.com/${USERGIT}/permission.git
 cd /root/ip/
 rm -rf .git
 git init
@@ -406,8 +406,8 @@ sed -i "s/### $name1 $exp $ivps1/### $name1 $exp4 $ivps1/g" /root/ip/vps
 git add .
 git commit -m renew
 git branch -M main
-git remote add origin https://github.com/${USERGIT}/ip.git
-git push -f https://${APIGIT}@github.com/${USERGIT}/ip.git
+git remote add origin https://github.com/${USERGIT}/permission.git
+git push -f https://${APIGIT}@github.com/${USERGIT}/permission.git
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •             ${NC} $COLOR1 $NC"
@@ -436,7 +436,7 @@ clear
 rm -rf /root/ip
 git config --global user.email "${EMAILGIT}"
 git config --global user.name "${USERGIT}"
-git clone https://github.com/${USERGIT}/ip.git
+git clone https://github.com/${USERGIT}/permission.git
 cd /root/ip/
 rm -rf .git
 git init
@@ -466,7 +466,7 @@ echo -e "$COLOR1┌────────────────────�
 rm -rf /root/ip
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
-git clone https://github.com/${USERGIT}/ip.git
+git clone https://github.com/${USERGIT}/permission.git
 cd /root/ip/
 rm -rf .git
 git init
@@ -528,7 +528,7 @@ read -p "   RENEW IP : " RENEW
 echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1 ${NC}  [INFO] Checking the IPVPS!"
 sleep 1
-REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/ip/main/vps | awk '{print $4}' | grep $daftar)
+REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/permission/main/ipmini | awk '{print $4}' | grep $daftar)
 if [[ $RENEW = $ivps1 ]]; then
 cd
 clear
