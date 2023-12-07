@@ -52,7 +52,7 @@ yell='\e[33m'
 BGX="\033[42m"
 END='\e[0m'
 AKTIF="VERIFIED"
-TOKEN="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"
+TOKEN="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"
 REPO="https://github.com/ALVIICELL/permission.git"
 EMAIL="dayyanzahra0@mail.com"
 USER="ALVIICELL"
@@ -66,12 +66,12 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 
 
     today=`date -d "0 days" +"%Y-%m-%d"`
-    git clone ${REPO} /root/regip/ &> /dev/null
+    git clone ${REPO} /root/permission/ &> /dev/null
     clear
     echo -e "MASUKAN IP VPS YANG BELUM DI DAFTAR !"
     echo -e ""
     read -p "Input IP Address : " ip
-    CLIENT_EXISTS=$(grep -w $ip /root/regip/ip | wc -l)
+    CLIENT_EXISTS=$(grep -w $ip /root/permission/main/ipmini | wc -l)
     if [[ ${CLIENT_EXISTS} == '1' ]]; then
     echo "IP Already Exist !"
     exit 0
@@ -92,22 +92,22 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
     
     if [[ ${exp} == '1' ]]; then
     exp2=`date -d "30 days" +"%Y-%m-%d"`
-    echo "### ${name} ${exp2} ${ip}" >> /root/regip/ip
+    echo "### ${name} ${exp2} ${ip}" >> /root/permission/main/ipmini
     elif [[ ${exp} == '2' ]]; then
     exp2=`date -d "60 days" +"%Y-%m-%d"`
-    echo "### ${name} ${exp2} ${ip}" >> /root/regip/ip
+    echo "### ${name} ${exp2} ${ip}" >> /root/permission/main/ipmini
     elif [[ ${exp} == '3' ]]; then
     exp2=`date -d "90 days" +"%Y-%m-%d"`
-    echo "### ${name} ${exp2} ${ip}" >> /root/regip/ip
+    echo "### ${name} ${exp2} ${ip}" >> /root/permission/main/ipmini
     elif [[ ${exp} == '4' ]]; then
     exp2=`date -d "360 days" +"%Y-%m-%d"`
-    echo "### ${name} ${exp2} ${ip}" >> /root/regip/ip
+    echo "### ${name} ${exp2} ${ip}" >> /root/permission/main/ipmini
     elif [[ ${exp} == '5' ]]; then
     read -p "Input Expired Days : " exp11
     exp2=`date -d "$exp11 days" +"%Y-%m-%d"`
-    echo "### ${name} ${exp2} ${ip}" >> /root/regip/ip
+    echo "### ${name} ${exp2} ${ip}" >> /root/permission/main/ipmini
     fi
-    cd /root/regip
+    cd /root/permission
     git config --global user.email "${EMAIL}" &> /dev/null
     git config --global user.name "${USER}" &> /dev/null
     rm -rf .git &> /dev/null
@@ -115,9 +115,9 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/kyt-team/regip
-    git push -f https://${TOKEN}@github.com/kyt-team/regip.git &> /dev/null
-    rm -rf /root/regip
+    git remote add origin https://github.com/ALVIICELL/permission
+    git push -f https://${TOKEN}@github.com/ALVIICELL/permission.git &> /dev/null
+    rm -rf /root/permission
     clear
     sleep 1
     echo "  Registering IP Address..."
@@ -155,26 +155,26 @@ CHATID="1156078455"
 KEY="6593069504:AAEiB6XCRwxlnxPujmw0TzbUi7HO6mCnNec"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 
-    rm -rf /root/regip
-    git clone ${REPO} /root/regip/ &> /dev/null
+    rm -rf /root/ALVIICELL/permission
+    git clone ${REPO} /root/permission/ &> /dev/null
     clear
     echo ""
     echo -e "${OR}┌───────────────────────────────┐$NC"
     echo -e "${OR}│${NC}${g} .::.${NC}    LIST IP VPS     ${NC}${g}.::. $NC"
     echo -e "${OR}└───────────────────────────────┘$NC"
-    grep -E "^###" "/root/regip/ip" | cut -d ' ' -f 2-6 | column -t | sort | uniq
-    grep -E "^#&"  "/root/regip/ip" | cut -d ' ' -f 2-6 | column -t | sort | uniq
+    grep -E "^###" "/root/permission/main/ipmini" | cut -d ' ' -f 2-6 | column -t | sort | uniq
+    grep -E "^#&"  "/root/permission/main/ipmini" | cut -d ' ' -f 2-6 | column -t | sort | uniq
     echo -e " ${OR}────────────────────────────────$NC"
 
     read -p "Input IP Address To Delete : " ipdel
-    name=$(cat /root/regip/ip | grep $ipdel | awk '{print $2}')
-    exp=$(cat /root/regip/ip | grep $ipdel | awk '{print $3}')
+    name=$(cat /root/permission/main/ipmini | grep $ipdel | awk '{print $2}')
+    exp=$(cat /root/permission/main/ipmini | grep $ipdel | awk '{print $3}')
     if [[ ${exp} == 'Lifetime' ]]; then
-    sed -i "/^#&   $name   $exp $ipdel/,/^},{/d" /root/regip/ip
+    sed -i "/^#&   $name   $exp $ipdel/,/^},{/d" /root/permission/main/ipmini
     else
-    sed -i "/^### $name $exp $ipdel/,/^},{/d" /root/regip/ip
+    sed -i "/^### $name $exp $ipdel/,/^},{/d" /root/permission/main/ipmini
     fi
-    cd /root/regip
+    cd /root/permission
     git config --global user.email "${EMAIL}" &> /dev/null
     git config --global user.name "${USER}" &> /dev/null
     rm -rf .git &> /dev/null
@@ -182,9 +182,9 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/kyt-team/regip
-    git push -f https://${TOKEN}@github.com/kyt-team/regip.git &> /dev/null
-    rm -rf /root/regip
+    git remote add origin https://github.com/ALVIICELL/permission
+    git push -f https://${TOKEN}@github.com/ALVIICELL/permission.git &> /dev/null
+    rm -rf /root/permission
     clear
     sleep 1
     echo "  Delete IP Address..."
@@ -220,27 +220,27 @@ CHATID="1156078455"
 KEY="6593069504:AAEiB6XCRwxlnxPujmw0TzbUi7HO6mCnNec"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 
-    rm -rf /root/regip
-    git clone ${REPO} /root/regip/ &> /dev/null
+    rm -rf /root/permission
+    git clone ${REPO} /root/permission/ &> /dev/null
     clear
     echo -e "${OR}┌───────────────────────────────┐$NC"
     echo -e "${OR}│${NC}${g}  .::.${NC} RENEW IP VPS ${NC}${g}.::. $NC"
     echo -e "${OR}└───────────────────────────────┘$NC"
-    grep -E "^###" "/root/regip/ip" | cut -d ' ' -f 2-6 | column -t | sort | uniq
+    grep -E "^###" "/root/permission/main/ipmini" | cut -d ' ' -f 2-6 | column -t | sort | uniq
     echo -e " ${OR}────────────────────────────────$NC"
     echo ""
     read -p "  Input IP Address To Renew : " ipdel
     read -p "  Input Days  : " days
-    name=$(cat /root/regip/ip | grep $ipdel | awk '{print $2}')
-    exp=$(cat /root/regip/ip | grep $ipdel | awk '{print $3}')
+    name=$(cat /root/permission/main/ipmini | grep $ipdel | awk '{print $2}')
+    exp=$(cat /root/permission/main/ipmini | grep $ipdel | awk '{print $3}')
     now=$(date +%Y-%m-%d)
     d1=$(date -d "$exp" +%s)
     d2=$(date -d "$now" +%s)
     exp2=$(( (d1 - d2) / 86400 ))
     exp3=$(($exp2 + $days))
     exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
-    sed -i "s/### $name $exp $ipdel/### $name $exp4 $ipdel/g" /root/regip/ip
-    cd /root/regip
+    sed -i "s/### $name $exp $ipdel/### $name $exp4 $ipdel/g" /root/permission/main/ipmini
+    cd /root/permission
     git config --global user.email "${EMAIL}" &> /dev/null
     git config --global user.name "${USER}" &> /dev/null
     rm -rf .git &> /dev/null
@@ -248,9 +248,9 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/kyt-team/regip
-    git push -f https://${TOKEN}@github.com/kyt-team/regip.git &> /dev/null
-    rm -rf /root/regip
+    git remote add origin https://github.com/ALVIICELL/permission
+    git push -f https://${TOKEN}@github.com/ALVIICELL/permission.git &> /dev/null
+    rm -rf /root/permission
     clear
     sleep 1
     echo "  Renew IP Address..."
