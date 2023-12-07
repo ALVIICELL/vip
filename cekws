@@ -22,7 +22,7 @@ checking_sc() {
     echo -ne
   else
     echo -e "${OR}────────────────────────────────────────────${NC}"
-    echo -e "\033[42m          YOGZTUNNEL AUTOSCRIPT          ${NC}"
+    echo -e "\033[42m          ALVI TUNNEL AUTOSCRIPT          ${NC}"
     echo -e "${OR}────────────────────────────────────────────${NC}"
     echo -e ""
     echo -e "            ${RED}PERMISSION DENIED !${NC}"
