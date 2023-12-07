@@ -52,8 +52,8 @@ yell='\e[33m'
 BGX="\033[42m"
 END='\e[0m'
 AKTIF="VERIFIED"
-TOKEN="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"
-REPO="https://github.com/ALVIICELL/regip.git"
+TOKEN="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"
+REPO="https://github.com/ALVIICELL/permission.git"
 EMAIL="dayyanzahra0@mail.com"
 USER="ALVIICELL"
 
